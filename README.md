@@ -14,7 +14,7 @@
 
 The smart contracts for the identity layer of plurality.
 
-## How to deploy
+## How to deploy the Plurality smart contracts
 
 1. Clone this repository
 
