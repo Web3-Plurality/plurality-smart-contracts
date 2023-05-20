@@ -41,3 +41,11 @@ npx hardhat compile
 ```
 npx hardhat run scripts/deploy.ts --network sepolia
 ```
+
+6. On successful deployment, you will see the deployed contract address. Something like this:
+
+```
+Contract deployed at: 0x123...
+```
+
+You can now use this address in setting up plurality-verifier for your dApp. Happy Development! 🚀
