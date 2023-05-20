@@ -1,19 +1,33 @@
 import { ethers } from "hardhat";
+require('dotenv').config({ path: __dirname + '../.env' });
+
 
 async function main() {
-  const currentTimestampInSeconds = Math.round(Date.now() / 1000);
-  const unlockTime = currentTimestampInSeconds + 60;
 
-  const lockedAmount = ethers.utils.parseEther("0.001");
+  const semaphore_verifier_address = process.env.SEMAPHORE_VERIFIER_ADDRESS; //sepolia address for semaphore verifier contract
+  const incremental_binary_tree_address = process.env.INCREMENTAL_BINARY_TREE_ADDRESS; //sepolia address for IncrementalBinaryTree library
 
-  const Lock = await ethers.getContractFactory("Lock");
-  const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
-
-  await lock.deployed();
+  const [deployer] = await ethers.getSigners();
 
   console.log(
-    `Lock with ${ethers.utils.formatEther(lockedAmount)}ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
+  "Deploying contracts with the account:",
+  deployer.address
   );
+
+  console.log("Account balance:", (await deployer.getBalance()).toString());
+
+  const PluralIdentity = await ethers.getContractFactory("PluralIdentity", {
+    libraries: {
+      "IncrementalBinaryTree" : incremental_binary_tree_address! 
+    }
+  });
+
+  const contract = await PluralIdentity.deploy(semaphore_verifier_address);
+
+  await contract.deployed();
+
+  console.log("Contract deployed at:", contract.address);
+
 }
 
 // We recommend this pattern to be able to use async/await everywhere

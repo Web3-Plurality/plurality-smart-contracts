@@ -21,6 +21,7 @@
     "hardhat": "^2.14.0"
   },
   "dependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^2.0.2"
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@semaphore-protocol/contracts": "^3.10.1"
   }
 }
