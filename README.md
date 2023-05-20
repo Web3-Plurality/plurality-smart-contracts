@@ -39,5 +39,5 @@ npx hardhat compile
 5. Deploy the smart contract on the network of your choice. We do it here on sepolia. Ensure that the account you are using to deploy the contract has enough gas to deploy the contract.
 
 ```
-npx hardhat run scripts/deploy.js --network sepolia
+npx hardhat run scripts/deploy.ts --network sepolia
 ```
