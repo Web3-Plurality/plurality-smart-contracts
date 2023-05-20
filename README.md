@@ -28,13 +28,13 @@ git clone https://github.com/Web3-Plurality/plurality-smart-contracts.git
 npm install
 ```
 
-3. Compile the smart contract
+3. Create a new .env file in the root of the folder and copy all the variables from .env.example file.  The private key variable will be empty. Put your own private key in this variable. You can use your metamask or any other wallet to get your private key.  
+
+4. Compile the smart contract
 
 ```
 npx hardhat compile
 ```
-
-4. Create an .env file using .env.example as a template and then put your private key in the .env file.
 
 5. Deploy the smart contract on the network of your choice. We do it here on sepolia. Ensure that the account you are using to deploy the contract has enough gas to deploy the contract.
 
