@@ -1,0 +1,26 @@
+{
+  "name": "plurality-smart-contracts",
+  "version": "1.0.0",
+  "description": "The smart contracts for the identity layer of plurality",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Web3-Plurality/plurality-smart-contracts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Web3-Plurality/plurality-smart-contracts/issues"
+  },
+  "homepage": "https://github.com/Web3-Plurality/plurality-smart-contracts#readme",
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "hardhat": "^2.14.0"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2"
+  }
+}
