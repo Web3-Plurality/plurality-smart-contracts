@@ -22,7 +22,7 @@ The smart contracts for the identity layer of plurality.
 git clone https://github.com/Web3-Plurality/plurality-smart-contracts.git
 ```
 
-2. Install the dependencies
+2. Go into the plurality-smart-contracts/ folder and install the dependencies
 
 ```
 npm install
