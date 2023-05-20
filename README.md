@@ -14,12 +14,12 @@
 
 The smart contracts for the identity layer of plurality.
 
-## How to deploy the Plurality smart contracts
+## How to compile and deploy the smart contracts
 
 1. Clone this repository
 
 ```
-git clone https://github.com/Web3-Plurality/zk-onchain-identity-verification.git
+https://github.com/Web3-Plurality/plurality-smart-contracts.git
 ```
 
 2. Install the dependencies
