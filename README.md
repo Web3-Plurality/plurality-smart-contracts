@@ -19,7 +19,7 @@ The smart contracts for the identity layer of plurality.
 1. Clone this repository
 
 ```
-https://github.com/Web3-Plurality/plurality-smart-contracts.git
+git clone https://github.com/Web3-Plurality/plurality-smart-contracts.git
 ```
 
 2. Install the dependencies
