@@ -4,7 +4,8 @@
   "description": "The smart contracts for the identity layer of plurality",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -17,11 +18,21 @@
   },
   "homepage": "https://github.com/Web3-Plurality/plurality-smart-contracts#readme",
   "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/npm": "^11.0.2",
     "dotenv": "^16.0.3",
-    "hardhat": "^2.14.0"
+    "hardhat": "^2.14.0",
+    "husky": "^8.0.3"
   },
   "dependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.2",
     "@semaphore-protocol/contracts": "^3.10.1"
+  },
+  "engines": {
+    "node": ">=20.8.1"
   }
 }
