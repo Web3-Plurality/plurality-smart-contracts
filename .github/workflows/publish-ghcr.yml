@@ -1,0 +1,36 @@
+name: Semantic Release Docker
+
+on:
+  push:
+    branches: [ "main" ]
+  release:
+    types: [created]
+  workflow_dispatch:
+  
+jobs:
+  semantic_release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure Git Credentials
+        run: |
+          git config --global user.email "plurality.web3@gmail.com"
+          git config --global user.name "semantic-release-bot"
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GHCR_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Semantic Release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GHCR_TOKEN }}
